@@ -105,13 +105,18 @@ console.log(add(p));
 // interface
 
 interface Point{
-    x:number,
-    y:number
+    x:number;
+    y:number;
+    z?:number;
 }
 
 function addition(point:Point){
     return point.x + point.y
 }
 
-let q ={x:45,y:45}
+let q ={x:45,y:45};
 console.log(addition(q));
+// let r ={x:45}
+// console.log(addition(r));
+// Argument of type '{ x: number; }' is not assignable to parameter of type 'Point'.
+//   Property 'y' is missing in type '{ x: number; }' but required in type 'Point'.

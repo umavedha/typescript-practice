@@ -78,3 +78,7 @@ function addition(point) {
 }
 var q = { x: 45, y: 45 };
 console.log(addition(q));
+// let r ={x:45}
+// console.log(addition(r));
+// Argument of type '{ x: number; }' is not assignable to parameter of type 'Point'.
+//   Property 'y' is missing in type '{ x: number; }' but required in type 'Point'.
