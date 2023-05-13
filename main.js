@@ -32,3 +32,49 @@ multiType = "hiii";
 var obj = { name: "uma", age: 25, gender: "F" };
 // obj.age= "dfg" will not allow this
 // obj.address  Property 'address' does not exist on type '{ name: string; age: number; gender: string; }'
+// conditional statements same as javascript
+// loop same as javascript.we can also use map,filter,reduce,forEach
+// function
+// 1.
+function sum(a, b) {
+    var sum = a + b;
+    return sum;
+}
+// console.log(sum(1,2))
+// 2.change case
+function changeCase(a) {
+    return a.toLowerCase();
+}
+//  changeCase(2)
+// intellisense
+function changeCase2(a) {
+    return a.toLowerCase();
+}
+// changeCase2(2) -- Argument of type '2' is not assignable to parameter of type 'string'.
+changeCase2('h');
+// optional argument
+function changeCase3(a, b) {
+    if (b)
+        return a.toLowerCase() + b;
+    return a.toLowerCase();
+}
+changeCase3('H');
+// default argument
+function changeCase4(a, b) {
+    if (b === void 0) { b = "hey"; }
+    if (b)
+        return a.toLowerCase() + b;
+    return a.toLowerCase();
+}
+console.log(changeCase4('H'));
+// function can also take objects
+function add(point) {
+    return point.x + point.y;
+}
+var p = { x: 2, y: 5 };
+console.log(add(p));
+function addition(point) {
+    return point.x + point.y;
+}
+var q = { x: 45, y: 45 };
+console.log(addition(q));
