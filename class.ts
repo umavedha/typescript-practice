@@ -2,20 +2,20 @@
 
 // class
 export{}
-class Car{
-    engine:string;
-    constructor(engine:string){
-        this.engine=engine;
-    }
-    start(){
-       return "Started "+this.engine
-    }
-    stop(){
-        return "Stopped "+this.engine
-     }
+// class Car{
+//     engine:string;
+//     constructor(engine:string){
+//         this.engine=engine;
+//     }
+//     start(){
+//        return "Started "+this.engine
+//     }
+//     stop(){
+//         return "Stopped "+this.engine
+//      }
      
 
-}
+// }
 
 // class Cars{
 //     constructor(public engine:string){}
@@ -30,15 +30,15 @@ class Car{
 // let cars = new Cars('Mercedez Benz')
 // console.log(cars);
 // console.log(cars.start());
-console.log('---------------------------');
+// console.log('---------------------------');
 
-let car1=new Car('Audi')
-console.log(car1)
-console.log(car1.start())
-console.log('---------------------------');
-let car2=new Car('Jaguar')
-console.log(car2.start())
-console.log('---------------------------');
+// let car1=new Car('Audi')
+// console.log(car1)
+// console.log(car1.start())
+// console.log('---------------------------');
+// let car2=new Car('Jaguar')
+// console.log(car2.start())
+// console.log('---------------------------');
 
 
 
@@ -102,6 +102,26 @@ let engine= new Engine(200,'Ashok Leyland')
 let truck=new Truck(engine,true)
 console.log(truck)
 console.log(truck.getHp())
+console.log('---------------------------');
 
+// interface
+
+interface Action{
+    start(message:string);
+    stop(message:string)
+}
+class Car implements Action{
+    constructor(public engine:string){
+    }
+    start(message:string){
+       return this.engine + message;
+    }
+    stop(message:string){
+        return this.engine + message;
+     }
+}
+let newCar= new Car('Audi');
+console.log(newCar.start( ' Started'));
+console.log(newCar.start( ' Didnt Stopped'));
 console.log('---------------------------');
 

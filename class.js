@@ -14,18 +14,18 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var Car = /** @class */ (function () {
-    function Car(engine) {
-        this.engine = engine;
-    }
-    Car.prototype.start = function () {
-        return "Started " + this.engine;
-    };
-    Car.prototype.stop = function () {
-        return "Stopped " + this.engine;
-    };
-    return Car;
-}());
+// class Car{
+//     engine:string;
+//     constructor(engine:string){
+//         this.engine=engine;
+//     }
+//     start(){
+//        return "Started "+this.engine
+//     }
+//     stop(){
+//         return "Stopped "+this.engine
+//      }
+// }
 // class Cars{
 //     constructor(public engine:string){}
 //     start(){
@@ -38,14 +38,14 @@ var Car = /** @class */ (function () {
 // let cars = new Cars('Mercedez Benz')
 // console.log(cars);
 // console.log(cars.start());
-console.log('---------------------------');
-var car1 = new Car('Audi');
-console.log(car1);
-console.log(car1.start());
-console.log('---------------------------');
-var car2 = new Car('Jaguar');
-console.log(car2.start());
-console.log('---------------------------');
+// console.log('---------------------------');
+// let car1=new Car('Audi')
+// console.log(car1)
+// console.log(car1.start())
+// console.log('---------------------------');
+// let car2=new Car('Jaguar')
+// console.log(car2.start())
+// console.log('---------------------------');
 var Car1 = /** @class */ (function () {
     function Car1(engine) {
         this.engine = engine;
@@ -109,4 +109,20 @@ var engine = new Engine(200, 'Ashok Leyland');
 var truck = new Truck(engine, true);
 console.log(truck);
 console.log(truck.getHp());
+console.log('---------------------------');
+var Car = /** @class */ (function () {
+    function Car(engine) {
+        this.engine = engine;
+    }
+    Car.prototype.start = function (message) {
+        return this.engine + message;
+    };
+    Car.prototype.stop = function (message) {
+        return this.engine + message;
+    };
+    return Car;
+}());
+var newCar = new Car('Audi');
+console.log(newCar.start(' Started'));
+console.log(newCar.start(' Didnt Stopped'));
 console.log('---------------------------');
