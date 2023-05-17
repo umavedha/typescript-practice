@@ -2,6 +2,7 @@
 
 // class
 export{}
+import {Engine} from './engine'
 // class Car{
 //     engine:string;
 //     constructor(engine:string){
@@ -74,10 +75,7 @@ console.log(carss.engine)
 console.log('---------------------------');
 
 // inheritance
-class Engine{
-    constructor(public horsepower:number,public engineType:string){
-    }
-}
+
 
 class Auto{
     engine:Engine;

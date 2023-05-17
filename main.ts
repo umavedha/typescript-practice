@@ -3,7 +3,7 @@ export{};
 // declare a variable properly
 
 let message="hi welcome";
-console.log(message);
+// console.log(message);
 
 // type declaration var let const
 
@@ -92,7 +92,7 @@ function changeCase4(a:string,b:string="hey"){
          return a.toLowerCase()+b
          return a.toLowerCase()
     }
-     console.log( changeCase4('H'))
+    //  console.log( changeCase4('H'))
 
 // function can also take objects
 
@@ -100,7 +100,7 @@ function add(point:{x:number,y:number}){
     return point.x + point.y
 }
 let p ={x:2,y:5}
-console.log(add(p));
+// console.log(add(p));
 
 // interface
 
@@ -115,11 +115,46 @@ function addition(point:Point){
 }
 
 let q ={x:45,y:45};
-console.log(addition(q));
+// console.log(addition(q));
 // let r ={x:45}
 // console.log(addition(r));
 // Argument of type '{ x: number; }' is not assignable to parameter of type 'Point'.
 //   Property 'y' is missing in type '{ x: number; }' but required in type 'Point'.
 
+// enum - special type
 
+enum Department{
+    Mech,ECE,EEE,IT,CSE,MSc
+}
+console.log('Enum-Department:',Department.MSc)
+console.log('----------------------------------')
+
+// generics
+
+
+let myFunction=(o:object)=>{
+    // spread operator ...o
+    return {...o,greet:'hi'}
+}
+let o={name:'uma',age:20}
+let f=myFunction(o)
+console.log('spread parameter',f);
+// console.log(f.name); property does not exist
+console.log('----------------------------------')
+
+
+let myFunction1=<T>(o:T)=>{
+    // T is generics
+    // spread operator ...o
+    return {...o,greet:'hey'}
+}
+let g=myFunction1('h')
+console.log('Generic',g);
+console.log('----------------------------------')
+
+
+//Object can be updated/modified in four ways 
+// 1.Spread parameter
+// 2.Object.assign
+// 3.Json.stringify-->json.parse
 
