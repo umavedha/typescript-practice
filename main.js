@@ -126,3 +126,21 @@ console.log('----------------------------------');
 // 1.Spread parameter
 // 2.Object.assign
 // 3.Json.stringify-->json.parse
+var numArray = [1, 23, 3];
+// numArray:number[] same can be written as a:Array<number>
+var strArray = ['a', 'b', 'c'];
+// strArray:string[]
+var myFunction2 = function (a) {
+    // spread operator ...o
+    return [a];
+};
+// let myFunction2=(a:number):number[]=>{
+//     // spread operator ...o
+//     return [a]
+// }
+var valArr = myFunction2(1);
+console.log('generic using array', valArr);
+// console.log(f.name); property does not exist
+console.log('----------------------------------');
+var mulArr;
+mulArr = [];

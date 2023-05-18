@@ -158,3 +158,32 @@ console.log('----------------------------------')
 // 2.Object.assign
 // 3.Json.stringify-->json.parse
 
+let numArray=[1,23,3]
+// numArray:number[] same can be written as a:Array<number>
+let strArray=['a','b','c']
+// strArray:string[]
+
+let myFunction2=(a:number)=>{
+    // spread operator ...o
+    return [a]
+}
+// let myFunction2=(a:number):number[]=>{
+//     // spread operator ...o
+//     return [a]
+// }
+let valArr=myFunction2(1)
+console.log('generic using array',valArr);
+// console.log(f.name); property does not exist
+console.log('----------------------------------')
+// array is implemented using generics
+
+interface abc<x,y>{
+    a:number;
+    b:number;
+    data:x;
+    data1:y
+}
+
+let mulArr:number[]|string[]
+mulArr=[]
+
